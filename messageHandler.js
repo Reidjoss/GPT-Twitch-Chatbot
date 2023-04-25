@@ -1,8 +1,8 @@
 const handleMessage = (TwitchClient) => {
   const fs = require("fs");
   const axios = require("axios");
-  const OPENAI_ENDPOINT = "https://api.openai.com/v1/completions";
-  const MODEL = "text-davinci-003";
+    const OPENAI_ENDPOINT = "https://api.openai.com/v1/completions";
+    const MODEL = "text-davinci-003";
   const lastGPTResponse = document.getElementById("aiStatus");
   
   let onCooldown = false
@@ -95,7 +95,7 @@ if (isNaN(tokensHTML) || tokensHTML <= 10) {
         const sendNextMessage = () => {
           if (messageIndex < messages.length) {
             // Send the next message
-            TwitchClient.say(channel, "Response from AI:"+messages[messageIndex]);
+            TwitchClient.say(channel, messages[messageIndex]);
             // Increment the message index
             messageIndex++;
             // Wait 1s before sending the next message
